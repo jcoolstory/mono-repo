@@ -1,6 +1,7 @@
 
-import {Canvas2D, CircleBody, CollisionTester, getLineBody, Line, MathUtil, MoveAnimate, Point, RBody, Rect, Renderer, Resource, TextBody, Vector} from "@gostop/go-engine"
+import { MathUtil, CollisionTester, Renderer, Resource, Vector } from "@gostop/go-engine";
 import { SampleRenderer, TestBody} from "@gostop/go-engine/example/common"
+import { TextBody, Canvas2D, RBody, Rect, CircleBody, Line, getLineBody, Point, MoveAnimate } from "@gostop/go-engine";
 
 enum Controlmode {
     None,AddObject,

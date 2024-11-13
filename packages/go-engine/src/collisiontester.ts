@@ -1,4 +1,5 @@
-import { CircleBody, Line, Point } from "./drawimage";
+
+import { CircleBody, Point, Line } from "./draw";
 import { MathUtil } from "./mathutil";
 
 export class CollisionTester{

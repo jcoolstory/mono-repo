@@ -1,5 +1,5 @@
-import { CollisionTester } from "../src/collisiontester";
-import { Bitmap, Canvas2D, MoveAnimate, Point, RBody, RectBody, Renderer, Resource, Vector } from "../src/drawimage";
+
+import { RectBody, Bitmap, CollisionTester, Vector, Point, MoveAnimate, RBody,  Canvas2D, Renderer, Resource } from "../src";
 import { MathUtil } from "../src/mathutil";
 
 

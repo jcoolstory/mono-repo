@@ -1,4 +1,4 @@
-import { Point } from "./drawimage";
+import { Point } from "./draw";
 
 export class MathUtil {
     

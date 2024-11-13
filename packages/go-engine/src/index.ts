@@ -1,3 +1,4 @@
 export * from "./collisiontester"
-export * from "./drawimage"
+export * from "./draw"
 export * from "./mathutil"
+export * from "./render"

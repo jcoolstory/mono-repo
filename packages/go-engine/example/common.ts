@@ -1,10 +1,10 @@
 import { CollisionTester } from "../src/collisiontester";
-import { Bitmap, Point, RectBody } from "../src/drawimage";
+import { Bitmap, Canvas2D, MoveAnimate, Point, RBody, RectBody, Renderer, Resource, Vector } from "../src/drawimage";
 import { MathUtil } from "../src/mathutil";
 
 
-class TestBody  extends RectBody{    
-    image : Bitmap = null;
+export class TestBody  extends RectBody{    
+    image : Bitmap | null = null;
     debugging : Boolean = false;
     angle : number = 0;
     collision : CollisionTester;
@@ -65,8 +65,8 @@ class TestBody  extends RectBody{
     } 
 }
 
-class SampleRenderer extends Renderer {
-    selectedBody : TestBody ; 
+export class SampleRenderer extends Renderer {
+    selectedBody : TestBody | null ; 
     public addMouseEvent(element:HTMLElement){
         element.addEventListener("mousedown",this.onmousedown.bind(this));
         element.addEventListener("mousemove",this.onmousemove.bind(this));

@@ -17,12 +17,12 @@ interface Animate {
     stop();
 }
 
-class Canvas2D extends CanvasRenderingContext2D{
+export class Canvas2D extends CanvasRenderingContext2D{
     width : number = 1;
     height : number = 1;
 }
 
-class Action implements Animate{
+export class Action implements Animate{
     timer : number;
     callback : Function;
     data : any;
@@ -63,7 +63,7 @@ class Action implements Animate{
     }
 }
 
-class MoveAnimate implements Animate {
+export class MoveAnimate implements Animate {
     timer =0;
     private duration : number = 0;
     public callback ;
@@ -142,7 +142,7 @@ export class Bitmap extends Rect {
     }
 }
 
-class SpriteAction extends Action{
+export class SpriteAction extends Action{
     constructor(data:SpriteBitmap,dur:number,repeat = true){        
         super(data,dur,repeat)
         this.frame =  data.rects.length;
@@ -153,7 +153,7 @@ class SpriteAction extends Action{
     }
 }
 
-class SpriteBitmap  {
+export class SpriteBitmap  {
     source : HTMLImageElement = null;
     rects : Rect []
     public currentIndex :number =0;
@@ -183,7 +183,7 @@ class SpriteBitmap  {
     }
 }
 
-class PolygonBody implements RenderObject, RBody{
+export class PolygonBody implements RenderObject, RBody{
     color : string = "#FFF";
     points : Point[] = [];
     shape : Rect = null;
@@ -213,7 +213,7 @@ class PolygonBody implements RenderObject, RBody{
     }
 }
 
-function getLineBody(body:RBody, lines : Line[]) : Line[]{
+export function getLineBody(body:RBody, lines : Line[]) : Line[]{
     if (body instanceof PolygonBody){
         const pbody = <PolygonBody> body;
         const pos : Point[] = pbody.points;
@@ -240,7 +240,7 @@ function getLineBody(body:RBody, lines : Line[]) : Line[]{
     return lines;
 }
 
-class ScrollSprite implements RenderObject {
+export class ScrollSprite implements RenderObject {
     color : string = "black";
     view : Rect = new Rect();
     region : Rect = new Rect();
@@ -253,7 +253,7 @@ class ScrollSprite implements RenderObject {
     }
 }
         
-class RayCastVectorBody extends PolygonBody{
+export class RayCastVectorBody extends PolygonBody{
     vector : Vector
     relationBody :RBody[];
     vertexes : CircleBody[] = [];
@@ -334,7 +334,7 @@ class RayCastVectorBody extends PolygonBody{
     }
 }
 
-class Vector {
+export class Vector {
     position : Point ;
     angle : number=  0;
     distance : number =1;
@@ -346,7 +346,7 @@ class Vector {
     }
 }
 
-class VectorBody extends Vector implements RenderObject, Shape{
+export class VectorBody extends Vector implements RenderObject, Shape{
     color : string = "#FFF";
 
     constructor(point:Point, angle:number = 0, distance:number = 1){
@@ -402,7 +402,7 @@ export class LineBody extends PolygonBody{
     }
 }
 
-class Renderer {
+export class Renderer {
     backgroundColor : string = "#000";
     objects : RenderObject[] = [];
     timer : number = 0;
@@ -448,7 +448,7 @@ class Renderer {
     }
 }
 
-class RBody implements RenderObject,Shape{    
+export class RBody implements RenderObject,Shape{    
     color : string = "#000";
     shape : Rect  = new Rect();
     angle : number = 0;
@@ -476,9 +476,8 @@ export class CircleBody extends RBody{
     }
 }
 
-class SpriteBody extends RBody{
+export class SpriteBody extends RBody{
     image : SpriteBitmap = null;
-    angle : number;
     currentAnimation : Animate;  
 
     public render(canvas : Canvas2D){
@@ -554,4 +553,4 @@ class ResourceManager {
 }
 
 
-const Resource = new ResourceManager();
+export const Resource = new ResourceManager();

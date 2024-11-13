@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>draw Canvas</title>
+<script type="text/javascript" src="../../release/canversions.js"></script>
+<script type="text/javascript" src="../common.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+    <canvas style="float:left" id="canvas" width="800" height="500"></canvas>
+    <div style="float:left">
+    <input type="text" onchange="tester.changeAngle(this.value)" onkeyup="this.onchange();" value="0"/>
+    <input type="button" onclick="tester.start()" value="start"/>
+    <input type="button" onclick="tester.stepframe()" value="step"/>    
+    <input type="button" onclick="tester.stop()"  value="stop"/>
+    <input type="button" onclick="tester.setStatus('AddObject')"  value="add"/>
+
+    </div>
+    <script>
+        tester.init();
+    </script>
+</body>
+<script type="module" src="main.ts"></script>
+</html>

@@ -449,6 +449,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gostop/go-engine@workspace:*, @gostop/go-engine@workspace:packages/go-engine":
+  version: 0.0.0-use.local
+  resolution: "@gostop/go-engine@workspace:packages/go-engine"
+  dependencies:
+    "@babel/core": "npm:^7.26.0"
+    "@rollup/plugin-babel": "npm:^6.0.4"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    "@types/babel__core": "npm:^7"
+    rollup: "npm:^4.25.0"
+    rollup-plugin-uglify: "npm:^6.0.4"
+    tslib: "npm:^2.8.1"
+    typescript: "npm:^5.6.3"
+    vite: "npm:^5.4.10"
+  languageName: unknown
+  linkType: soft
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -1545,6 +1561,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"example@workspace:packages/example":
+  version: 0.0.0-use.local
+  resolution: "example@workspace:packages/example"
+  dependencies:
+    "@gostop/go-engine": "workspace:*"
+    typescript: "npm:~5.6.2"
+    vite: "npm:^5.4.10"
+  languageName: unknown
+  linkType: soft
+
 "exponential-backoff@npm:^3.1.1":
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
@@ -1775,22 +1801,6 @@ __metadata:
   checksum: 10c0/f34e0a1845b694f45188331742af9f488b07ba7440a06e9d2039fce0386fbbfc24afdbb9846ebdccd4092d03644e43081c49eb27b30f4b88e43af156e1c1dc34
   languageName: node
   linkType: hard
-
-"go-engine@workspace:packages/go-engine":
-  version: 0.0.0-use.local
-  resolution: "go-engine@workspace:packages/go-engine"
-  dependencies:
-    "@babel/core": "npm:^7.26.0"
-    "@rollup/plugin-babel": "npm:^6.0.4"
-    "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@types/babel__core": "npm:^7"
-    rollup: "npm:^4.25.0"
-    rollup-plugin-uglify: "npm:^6.0.4"
-    tslib: "npm:^2.8.1"
-    typescript: "npm:^5.6.3"
-    vite: "npm:^5.4.10"
-  languageName: unknown
-  linkType: soft
 
 "graceful-fs@npm:^4.2.6":
   version: 4.2.11

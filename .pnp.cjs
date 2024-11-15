@@ -639,7 +639,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.26.0"],\
           ["@rollup/plugin-babel", "virtual:082dc05392b0c25c2ba718f0f6ac951addf5aadcf067fc0d0eb23a21337d712cd84e6449778845212c792496152ade427484233c35c52736e09e3f157f790111#npm:6.0.4"],\
           ["@rollup/plugin-typescript", "virtual:082dc05392b0c25c2ba718f0f6ac951addf5aadcf067fc0d0eb23a21337d712cd84e6449778845212c792496152ade427484233c35c52736e09e3f157f790111#npm:12.1.1"],\
-          ["@types/babel__core", "npm:7.20.5"],\
           ["rollup", "npm:4.25.0"],\
           ["rollup-plugin-uglify", "virtual:082dc05392b0c25c2ba718f0f6ac951addf5aadcf067fc0d0eb23a21337d712cd84e6449778845212c792496152ade427484233c35c52736e09e3f157f790111#npm:6.0.4"],\
           ["tslib", "npm:2.8.1"],\
@@ -847,7 +846,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.26.0"],\
           ["@babel/helper-module-imports", "npm:7.25.9"],\
           ["@rollup/pluginutils", "virtual:aeec37e68cfd1b761ddf8fc0f30e136c839a96a2b217d22c294fc995d41c322c72dc3bfbf304a7475e98cdbce350a9f1373c59f9fa1608c9a8b541fbc67dd6c0#npm:5.1.3"],\
-          ["@types/babel__core", "npm:7.20.5"],\
+          ["@types/babel__core", null],\
           ["@types/rollup", null],\
           ["rollup", "npm:4.25.0"]\
         ],\
